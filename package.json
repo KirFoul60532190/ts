@@ -1,0 +1,30 @@
+{
+  name: 'John',
+  position: 'General manager',
+  age: 40,
+  gender: 'man'
+}
+{
+  "name": "Anna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url":
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url":
+  },
+  "homepage":
+  "devDependencies": {
+    "ts-loader": "^9.5.2"
+  }
+}
+]

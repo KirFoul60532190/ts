@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
+
+{
+  "compilerOptions": {
+    "lib": "es2015",
+    "module": "commonjs",
+    "OutDir": "dist",
+    "sourcemap": true,
+    "strict": true,
+    "target": "es2015"
+  },
+  "unclude": [
+    "src"
+  ]
+}
+
