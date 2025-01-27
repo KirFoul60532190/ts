@@ -1,23 +1,27 @@
-[
-    {
-        name: 'Anna',
-        position: 'Manager',
-        age: 34,
-        gender: 'woman'
-    },
-    {
-        name: 'John',
-        position: 'General manager',
-        age: 40,
-        gender: 'man'
-    }
-]
+import { usersArray, User } from './users';
+import { usersInfoArray, UserInfo } from './userInfo';
 
-let a = 1 + 2
-let b = a + 3
-let c = {
-    apple: a,
-    banana: b
-} let d: number
-let d = c.apple * 4
+interface UserPosition {
+    name: string;
+    position: string;
+    age: number;
+    gender: string;
+}
 
+function getUsersJobPositions(users: User[]): UserPosition[] {
+    return users.map(user => {
+        const userInfo = usersInfoArray.find(info => info.userid === user.userid);
+        if (userInfo) {
+            return {
+                name: user.name,
+                position: userInfo.organization.position,
+                age: userInfo.age,
+                gender: user.gender,
+            };
+        }
+        throw new Error(`Не найдено никакой дополнительной информации для пользователя с id  ${user.userid}`);
+    });
+}
+
+const usersPositions = getUsersJobPositions(usersArray);
+console.log('userPositions', usersPositions);
