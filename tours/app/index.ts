@@ -14,12 +14,13 @@ const imagesStore = images; // ссылка на изображения нужн
 // init data
   const tourData: Promise<ITours[]> = getTours();
 
-  tourData.then((data): void => {
+
+  tourData.then((data) => {
     console.log('call ')
     toursDataArray = data;
     initToursDivElements(data);
   });
-}
+
 
 
 
